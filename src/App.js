@@ -17,9 +17,12 @@ function App() {
     }
   }
 
+  const col = useRef();
+
   function deleteCol(){
     if (span !==10){
       setSpan(span+1)
+      col.current.style.display = "none"
     }
   }
   ////////////////////////////////////////////////////////////////////////////////////
@@ -38,12 +41,12 @@ function App() {
           <Col className="column headCol" span={span}> GitHub <DeleteTwoTone className="deleteCol" onClick={deleteCol} /> </Col>
           <Col className="column headCol" span={span}> Git <DeleteTwoTone className="deleteCol" onClick={deleteCol} /> </Col>
         </Row>
-        <Columns span={span} />
-        <Columns span={span} />
-        <Columns span={span} />
-        <Columns span={span} />
-        <Columns span={span} />
-        <Columns span={span} />
+        <Columns span={span} title="Overall Score"/>
+        <Columns span={span} title= "Product Description"/>
+        <Columns span={span} title = "Funding History" />
+        <Columns span={span} title="Pricing"/>
+        <Columns span={span} title="Features"/>
+        <Columns span={span} title="Customer Case Studies"/>
       </>
       </div>
     </body>
