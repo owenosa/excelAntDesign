@@ -9,7 +9,7 @@ import Columns from './Columns'
 function App() {
   // State Hooks
   const [span, setSpan] = useState(4)
-  
+
   // functions to resize columns span on addition or deletion 
   function addCol(){
     if (span !== 2){
@@ -17,14 +17,12 @@ function App() {
     }
   }
 
-  const col = useRef();
-
   function deleteCol(){
-    if (span !==10){
+    if (span !==4){
       setSpan(span+1)
-      col.current.style.display = "none"
     }
   }
+
   ////////////////////////////////////////////////////////////////////////////////////
 
   return (
